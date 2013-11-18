@@ -1,0 +1,21 @@
+{
+  "name": "grunt-redirect",
+  "version": "0.0.0",
+  "description": "A grunt task for redirect",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/home/dev/Dropbox/workspace/git-repos/grunt-redirect"
+  },
+  "author": {
+    "name": "Hiroyuki Sano",
+    "email": "sh19910711@gmail.com",
+    "url": "http://yomogimochi.com/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gruntplugin"
+  ]
+}
