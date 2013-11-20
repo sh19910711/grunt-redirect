@@ -1,9 +1,10 @@
 module.exports = (grunt)->
   grunt.loadTasks "tasks"
 
+  # run test
   grunt.initConfig
     redirect:
       dist:
         files:
-          "test.txt": "gcc --version"
+          "tmp/test.txt": "gcc --version"
 
