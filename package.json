@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "description": "A grunt task for Redirects",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "/home/dev/Dropbox/workspace/git-repos/grunt-redirect"
+    "url": "git://github.com/sh19910711/grunt-redirect.git"
   },
   "author": {
     "name": "Hiroyuki Sano",
     "email": "sh19910711@gmail.com",
-    "url": "http://yomogimochi.com/"
+    "url": "https://github.com/sh19910711"
   },
   "license": "MIT",
   "keywords": [
