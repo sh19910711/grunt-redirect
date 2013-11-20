@@ -18,8 +18,16 @@
   "keywords": [
     "gruntplugin"
   ],
+  "peerDependencies": {
+    "grunt": "~0.4"
+  },
   "devDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0",
+    "should": "~2.1.0",
+    "coffee-script": "~1.6.3",
+    "glob": "~3.2.7",
+    "underscore": "~1.5.2"
   },
   "dependencies": {
     "underscore": "~1.5.2",
