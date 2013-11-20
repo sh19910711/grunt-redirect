@@ -1,7 +1,7 @@
 {
   "name": "grunt-redirect",
   "version": "0.0.0",
-  "description": "A grunt task for Redirects",
+  "description": "Grunt task to save command output to file.",
   "scripts": {
     "test": "grunt test"
   },
