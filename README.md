@@ -2,6 +2,9 @@
 
 [Grunt](https://github.com/gruntjs/grunt) task to save command output to file.
 
+[![Build Status](https://travis-ci.org/sh19910711/grunt-redirect.png?branch=master)](https://travis-ci.org/sh19910711/grunt-redirect)
+[![Dependency Status](https://gemnasium.com/sh19910711/grunt-redirect.png)](https://gemnasium.com/sh19910711/grunt-redirect)
+
 
 ## Getting Started
 
