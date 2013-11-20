@@ -6,5 +6,6 @@ module.exports = (grunt)->
     redirect:
       dist:
         files:
-          "tmp/test.txt": "gcc --version"
+          "tmp/test01.txt": "gcc --version"
+          "tmp/test02.txt": "gcc --version"
 
