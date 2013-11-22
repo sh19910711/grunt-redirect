@@ -39,15 +39,17 @@ module.exports = (grunt) ->
   get_commands = get_commands = (options) ->
     # split into command and args
     keys = _(options).keys()
-    commands = _(keys).reduce((commands, key) ->
+    _(keys).reduce((commands, key) ->
       obj = {}
       command_text = options[key]
+      # has args
       if /\s/.test(command_text)
         command = command_text.match(/(.*)\s/)[1]
         args = get_args(command_text)
         obj[key] =
           command: command
           args: args
+      # command only
       else
         obj[key] =
           command: command_text
@@ -55,7 +57,6 @@ module.exports = (grunt) ->
       _(commands).extend obj
       commands
     , {})
-    commands
 
   
   # to boolean
@@ -68,9 +69,9 @@ module.exports = (grunt) ->
   # 
   redirect_task_func = redirect_task_func = ->
     done_callback = @async()
-    options = @data
-    commands = get_commands(options.files)
-    files = get_files(options.files)
+    options       = @data
+    commands      = get_commands(options.files)
+    files         = get_files(options.files)
     
     # extend flags
     _(flags).extend @options()
@@ -88,14 +89,14 @@ module.exports = (grunt) ->
           
           # set written data
           write_body = ""
-          write_body += result.stdout  if flags.stdout
-          write_body += result.stderr  if flags.stderr
+          write_body += result.stdout if flags.stdout
+          write_body += result.stderr if flags.stderr
           
           # check to exist the file if flags.overwrite equals false
-          throw new Error("E003: File is found (" + filename + ")")  if fs.existsSync(filename)  unless flags.overwrite
+          throw new Error("E003: File is found (#{filename})") if fs.existsSync(filename)  unless flags.overwrite
           fs.writeFileSync filename, write_body
         else
-          grunt.log.writeln command.command + " > " + filename + ": NG"
+          grunt.log.writeln "#{command.command} > #{filename}: NG"
         callback res
 
 
@@ -104,7 +105,7 @@ module.exports = (grunt) ->
     # run command each file
     # 
     functions = _(files).map((filename) ->
-      exec_command.bind this, filename
+      exec_command.bind @, filename
     )
 
     grunt.log.writeln "Processing tasks..."
